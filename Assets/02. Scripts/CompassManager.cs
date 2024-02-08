@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -8,26 +8,26 @@ public class CompassManager : MonoBehaviour
 {
     public Image compassImg;
     public TMP_Text compassAngleTxt;
-    public float smoothSpeed = 0.1f; // È¸ÀüÀÇ ºÎµå·¯¿òÀ» Á¶ÀıÇÏ´Â ¼Óµµ
+    public float smoothSpeed = 0.1f; // íšŒì „ì˜ ë¶€ë“œëŸ¬ì›€ì„ ì¡°ì ˆí•˜ëŠ” ì†ë„
 
     void Start()
     {
-        // ³ªÄ§¹İ ±â´É È°¼ºÈ­
+        // ë‚˜ì¹¨ë°˜ ê¸°ëŠ¥ í™œì„±í™”
         Input.compass.enabled = true;
     }
 
     void Update()
     {
-        // ³ªÄ§¹İ¿¡¼­ ÇöÀç ¹æÇâ(°¢µµ) °¡Á®¿À±â
+        // ë‚˜ì¹¨ë°˜ì—ì„œ í˜„ì¬ ë°©í–¥(ê°ë„) ê°€ì ¸ì˜¤ê¸°
         float angle = Input.compass.trueHeading;
 
-        // ¸ñÇ¥ È¸Àü°ª ¼³Á¤
+        // ëª©í‘œ íšŒì „ê°’ ì„¤ì •
         Quaternion targetRotation = Quaternion.Euler(0, 0, -angle);
 
-        // ÇöÀç È¸Àü°ª°ú ¸ñÇ¥ È¸Àü°ª »çÀÌ¸¦ ºÎµå·´°Ô º¸°£
+        // í˜„ì¬ íšŒì „ê°’ê³¼ ëª©í‘œ íšŒì „ê°’ ì‚¬ì´ë¥¼ ë¶€ë“œëŸ½ê²Œ ë³´ê°„
         compassImg.transform.rotation = Quaternion.Lerp(compassImg.transform.rotation, targetRotation, smoothSpeed * Time.deltaTime);
 
-        // ÅØ½ºÆ® ÄÄÆ÷³ÍÆ®¿¡ °¢µµ Ç¥½Ã (¼Ò¼öÁ¡ ¾øÀÌ)
-        compassAngleTxt.text = Mathf.RoundToInt(angle).ToString() + "¡Æ";
+        // í…ìŠ¤íŠ¸ ì»´í¬ë„ŒíŠ¸ì— ê°ë„ í‘œì‹œ (ì†Œìˆ˜ì  ì—†ì´)
+        compassAngleTxt.text = Mathf.RoundToInt(angle).ToString() + "Â°";
     }
 }

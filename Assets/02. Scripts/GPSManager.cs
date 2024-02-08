@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -8,13 +8,14 @@ public class GPSManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI latitudeText;
     [SerializeField] TextMeshProUGUI longtitudeText;
+    [SerializeField] TextMeshProUGUI debugText;
     private const float MaxWaitTime = 10f;
     private const float ResendTime = 1f;
     private const string GpsAccessFailed = "GPS access failed";
     private const string GpsInitFailed = "GPS initialization failed";
     private const string ResponseTimeout = "Response timeout";
     
-    POIData data = new POIData("Á¦¹°Æ÷½ÃÀå", "ABC", 1,1,1);
+    public POIData data = new POIData("ì œë¬¼í¬ì‹œì¥", "ABC", 1,1,1);
 
     private void Start()
     {
@@ -53,7 +54,7 @@ public class GPSManager : MonoBehaviour
             yield break;
         }
 
-        // À§Ä¡ Á¤º¸¸¦ ¹İº¹ÀûÀ¸·Î ¾÷µ¥ÀÌÆ®
+        // ìœ„ì¹˜ ì •ë³´ë¥¼ ë°˜ë³µì ìœ¼ë¡œ ì—…ë°ì´íŠ¸
         while (Input.location.status == LocationServiceStatus.Running)
         {
             UpdateGpsData();
