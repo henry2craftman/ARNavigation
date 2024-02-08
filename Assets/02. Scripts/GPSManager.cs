@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Android;
@@ -12,6 +13,8 @@ public class GPSManager : MonoBehaviour
     private const string GpsAccessFailed = "GPS access failed";
     private const string GpsInitFailed = "GPS initialization failed";
     private const string ResponseTimeout = "Response timeout";
+    
+    POIData data = new POIData("제물포시장", "ABC", 1,1,1);
 
     private void Start()
     {
@@ -35,7 +38,7 @@ public class GPSManager : MonoBehaviour
             yield break;
         }
 
-        Input.location.Start(1, 1);
+        Input.location.Start();
 
         float waitTime = 0;
         while (Input.location.status == LocationServiceStatus.Initializing && waitTime < MaxWaitTime)
