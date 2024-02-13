@@ -1,12 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class DBManager : MonoBehaviour
 {
     class POIDataList
     {
-        public POIData[] pois = new POIData[2];
+        public List<POIData> pois = new List<POIData>();
     }
 
     POIDataList data = new POIDataList();
@@ -14,13 +16,21 @@ public class DBManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //string path = Application.dataPath + "04. Resources/ROIInfo.json";
+        // Resources 폴더를 사용하지 않을 시
+        //string path = Application.dataPath + "/04. Resources/ROIInfo.json";
+        //string json = File.ReadAllText(path);
+        //Debug.Log(json);
 
-        TextAsset json = Resources.Load<TextAsset>("ROIInfo");
-        Debug.Log(json.text);
+        // Resources 폴더를 사용 시
+        TextAsset textAsset = Resources.Load<TextAsset>("ROIInfo");
+        string json = textAsset.text;
 
-        data = JsonUtility.FromJson<POIDataList>(json.text);
+        data = JsonUtility.FromJson<POIDataList>(json);
+        foreach (POIData po in data.pois)
+        {
+            Debug.Log(po.name);
+        }
 
-        Debug.Log(data.pois.Length);
+        
     }
 }
