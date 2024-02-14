@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 // POI 데이터 저장을 위한 컨테이너
 [Serializable]

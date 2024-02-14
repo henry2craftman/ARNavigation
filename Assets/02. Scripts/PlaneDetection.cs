@@ -24,13 +24,13 @@ public class PlaneDetection : MonoBehaviour
     {
         LocateIndicatorAtScreenCenter();
 
+        SpawnObjectByClick();
+        ZoomInOutObjectByWheel();
+
         if (Input.touchCount == 0) return;
 
         SpawnObjectByTouch();
         ZoomInOutObjectByTouch();
-
-        SpawnObjectByClick();
-        ZoomInOutObjectByWheel();
     }
 
     /// <summary>

@@ -1391,6 +1391,7 @@ GameObject:
   - component: {fileID: 1537070812}
   - component: {fileID: 1537070814}
   - component: {fileID: 1537070813}
+  - component: {fileID: 1537070815}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -1487,6 +1488,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RaycastPrefab: {fileID: 0}
+--- !u!114 &1537070815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537070808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedLibrary: {fileID: 11400000, guid: 21e708ab22f9c0e4ba53ea52e7945fb4, type: 2}
+  m_MaxNumberOfMovingImages: 2
+  m_TrackedImagePrefab: {fileID: 8488788323916851335, guid: ba8827b3fb43a2a47ba1305e77f949be, type: 3}
 --- !u!1 &1652031587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,6 +1642,12 @@ MonoBehaviour:
   latitudeText: {fileID: 214885202}
   longtitudeText: {fileID: 1004480043}
   debugText: {fileID: 0}
+  data:
+    name: "\uC81C\uBB3C\uD3EC\uC2DC\uC7A5"
+    description: ABC
+    latitude: 1
+    longitude: 1
+    altitude: 1
 --- !u!4 &1741117458
 Transform:
   m_ObjectHideFlags: 0

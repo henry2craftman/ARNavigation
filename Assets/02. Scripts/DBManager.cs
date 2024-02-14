@@ -1,9 +1,8 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+// JsonUtility를 통해 JSON을 Object로 변환
 public class DBManager : MonoBehaviour
 {
     class POIDataList
@@ -29,8 +28,6 @@ public class DBManager : MonoBehaviour
         foreach (POIData po in data.pois)
         {
             Debug.Log(po.name);
-        }
-
-        
+        }        
     }
 }
