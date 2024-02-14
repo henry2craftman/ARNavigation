@@ -56,7 +56,7 @@ public class DBManager : MonoBehaviour
 
                 foreach (var column in columns)
                 {
-                    Debug.Log("line: " + i + ": " + column); // 구글 스프레드 시트 사용 2 ~ 10번째
+                    // Debug.Log("line: " + i + ": " + column); // 구글 스프레드 시트 사용 2 ~ 10번째
                 }
             }
         }
