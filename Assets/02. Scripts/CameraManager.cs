@@ -17,6 +17,7 @@ public class CameraManager : MonoBehaviour
 
     public Camera cam;
     public TMP_Text log;
+    string path = $"/storage/emulated/0/DCIM/ARNavigation/";
 
     private void Awake()
     {

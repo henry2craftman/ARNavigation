@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using CesiumForUnity;
 
 public class GeospatialAnchorManager : MonoBehaviour
 {
@@ -24,12 +25,6 @@ public class GeospatialAnchorManager : MonoBehaviour
 
         earthManager = GetComponent<AREarthManager>();
         anchorManager = GetComponent<ARAnchorManager>();
-
-        //anchorManager = GetComponent<ARAnchorManager>(); // TODO: nullReference
-        //ARGeospatialAnchor anchor = ARAnchorManagerExtensions.AddAnchor(anchorManager, latitude, longtitude, altitude, Quaternion.identity);
-        //var anchoredAsset = Instantiate(anchorPrefab, anchor.transform);
-
-        //logTxt.text += anchor.GetInstanceID() + " / " + anchoredAsset.name;
     }
 
     public void SetAnchor()
@@ -45,7 +40,7 @@ public class GeospatialAnchorManager : MonoBehaviour
                     altitude,
                     Quaternion.identity);
             var anchoredAsset = Instantiate(anchorPrefab, anchor.transform);
-            logTxt.text += "배치완료\n" + anchoredAsset.transform.position;
+            logTxt.text += "배치완료: " + anchoredAsset.transform.name + "\n";
         }
     }
 }
