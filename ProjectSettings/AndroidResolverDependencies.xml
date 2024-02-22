@@ -1,5 +1,6 @@
 <dependencies>
   <packages>
+    <package>com.arthenica:mobile-ffmpeg-min-gpl:4.4</package>
     <package>com.google.android.gms:play-services-location:17+</package>
   </packages>
   <files>
@@ -30,6 +31,7 @@
     <file>Assets/Plugins/Android/androidx.swiperefreshlayout.swiperefreshlayout-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.0.aar</file>
     <file>Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.arthenica.mobile-ffmpeg-min-gpl-4.4.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-base-17.3.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-basement-17.3.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-location-17.1.0.aar</file>
@@ -38,7 +40,7 @@
   </files>
   <settings>
     <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
-    <setting name="bundleId" value="com.DefaultCompany.ARNavigation" />
+    <setting name="bundleId" value="com.HenryInc.ARNavi" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradlePropertiesTemplateEnabled" value="False" />
