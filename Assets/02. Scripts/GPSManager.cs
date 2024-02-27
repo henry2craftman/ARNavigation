@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -8,7 +8,6 @@ public class GPSManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI latitudeText;
     [SerializeField] TextMeshProUGUI longtitudeText;
-    [SerializeField] TextMeshProUGUI debugText;
     private const float MaxWaitTime = 10f;
     private const float ResendTime = 1f;
     private const string GpsAccessFailed = "GPS access failed";

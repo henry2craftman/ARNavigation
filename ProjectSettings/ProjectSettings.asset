@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: HenryInc
+  companyName: aaaaa
   productName: ARNavi
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -135,10 +135,6 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.1
   preloadedAssets:
-  - {fileID: 6883124684253069824, guid: a6c7c04c031088f4fa1b0d7c320b54ba, type: 2}
-  - {fileID: 11400000, guid: 0f3d4cab1f3804941a08935edbc36b24, type: 2}
-  - {fileID: 4800000, guid: c9f956787b1d945e7b36e0516201fc76, type: 3}
-  - {fileID: 4800000, guid: 0945859e5a1034c2cb6dce53cb4fb899, type: 3}
   - {fileID: 11400000, guid: d24e3d890f8138f4381062e88b0f5997, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -159,7 +155,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.HenryInc.ARNavi
+    Android: com.aaaaa.ARNavi
   buildNumber:
     Standalone: 0
     iPhone: 0
