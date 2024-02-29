@@ -3530,7 +3530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.5, y: -875}
+  m_AnchoredPosition: {x: 190.5, y: -275}
   m_SizeDelta: {x: 331, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &176398677
@@ -16750,7 +16750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &801307967
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16767,10 +16767,10 @@ RectTransform:
   m_Father: {fileID: 1963047446}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.5, y: -200}
-  m_SizeDelta: {x: 331, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &801307968
 MonoBehaviour:
@@ -22616,7 +22616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.5, y: -575}
+  m_AnchoredPosition: {x: 190.5, y: -275}
   m_SizeDelta: {x: 331, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1090605555
@@ -29547,7 +29547,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.5, y: -800}
+  m_AnchoredPosition: {x: 190.5, y: -275}
   m_SizeDelta: {x: 331, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1441243826
@@ -34138,7 +34138,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 560}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621033503
 MonoBehaviour:
@@ -35974,7 +35974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1685869450
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40991,7 +40991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1947508490
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41008,10 +41008,10 @@ RectTransform:
   m_Father: {fileID: 1963047446}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.5, y: -125}
-  m_SizeDelta: {x: 331, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947508491
 MonoBehaviour:
@@ -46095,7 +46095,7 @@ PrefabInstance:
     - target: {fileID: 1342982267449299452, guid: 218c49f646fbec54081034b70bc3ab00, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 40280836}
     - target: {fileID: 1342982267449299452, guid: 218c49f646fbec54081034b70bc3ab00, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StopRecordingByFrame
@@ -46151,7 +46151,7 @@ PrefabInstance:
     - target: {fileID: 6323802017873102402, guid: 218c49f646fbec54081034b70bc3ab00, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 40280836}
     - target: {fileID: 6323802017873102402, guid: 218c49f646fbec54081034b70bc3ab00, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TakeVideo
@@ -46163,6 +46163,10 @@ PrefabInstance:
     - target: {fileID: 8257828111108354140, guid: 218c49f646fbec54081034b70bc3ab00, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 40280836}
+    - target: {fileID: 8257828111108354140, guid: 218c49f646fbec54081034b70bc3ab00, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TakePicture
       objectReference: {fileID: 0}
     - target: {fileID: 8412456883134754070, guid: 218c49f646fbec54081034b70bc3ab00, type: 3}
       propertyPath: m_AnchorMax.y

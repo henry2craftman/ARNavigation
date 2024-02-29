@@ -1,4 +1,4 @@
-#define UNITY_STANDALONE
+#define UNITY_ANDROID
 
 using System.Collections;
 using System.Collections.Generic;
@@ -25,14 +25,18 @@ public class CameraManager : MonoBehaviour
     string galleryPath = $"/storage/emulated/0/DCIM/ARNavigation/";
     private int count;
     bool isTakingVideo;
-    Texture2D image = new Texture2D(Screen.width, Screen.height, TextureFormat.ARGB32, false);
+    Texture2D image;
+    Rect rect;
 
 
     private void Awake()
     {
         Application.targetFrameRate = frameRate;
 
-        arSession = GetComponent<ARSession>();
+        image = new Texture2D(Screen.width, Screen.height, TextureFormat.ARGB32, false);
+        rect = new Rect(0, 0, Screen.width, Screen.height);
+
+        arSession = FindAnyObjectByType<ARSession>();
         aRCoresessionSubsystem = (ARCoreSessionSubsystem)arSession.subsystem;
     }
 
@@ -107,7 +111,6 @@ public class CameraManager : MonoBehaviour
             }
         }
     }
-
     void Execute()
     {
         RenderTexture rt = new RenderTexture(Screen.width, Screen.height, 32, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB); // RGBA 
@@ -118,8 +121,8 @@ public class CameraManager : MonoBehaviour
 
         cam.Render();
 
-        image = new Texture2D(Screen.width, Screen.height, TextureFormat.ARGB32, false);
-        image.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+        //image = new Texture2D(Screen.width, Screen.height, TextureFormat.ARGB32, false);
+        image.ReadPixels(rect, 0, 0);
         image.Apply(); // 활성 택스쳐를 적용
 
         cam.targetTexture = null;
@@ -129,6 +132,7 @@ public class CameraManager : MonoBehaviour
         byte[] bytes = image.EncodeToPNG(); // 저장
 
         string fileName = "/Images/" + String.Format("frame_{0:D4}", count++) + ".png";
+
         //string fileName = DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".png";
         //string filePath = Path.Combine(Application.persistentDataPath, fileName); // Application.persistentDataPath 읽히지 않음
 
@@ -146,4 +150,6 @@ public class CameraManager : MonoBehaviour
         Destroy(rt);
         Destroy(image);
     }
+
+
 }
