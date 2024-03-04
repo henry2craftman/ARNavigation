@@ -12,7 +12,6 @@ public class ImageDetection : MonoBehaviour
     ARTrackedImageManager imageManager;
     List<GameObject> objs = new List<GameObject>();
 
-    // Start is called before the first frame update
     void Awake()
     {
         imageManager = GetComponent<ARTrackedImageManager>();
@@ -20,6 +19,10 @@ public class ImageDetection : MonoBehaviour
         imageManager.trackedImagesChanged += OnImageTrackedEvent;
     }
 
+    /// <summary>
+    /// 이미지가 변경되면 실행되는 이벤트 함수
+    /// </summary>
+    /// <param name="arg">이벤트를 위한 인자</param>
     void OnImageTrackedEvent(ARTrackedImagesChangedEventArgs arg)
     {
         foreach(ARTrackedImage trackedImage in arg.added)
