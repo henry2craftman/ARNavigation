@@ -1,0 +1,14 @@
+<!--
+MobileFFmpeg iOS and Android Dependencies.
+-->
+
+<dependencies>
+  <iosPods>
+    <iosPod name="mobile-ffmpeg-min-gpl" version="4.4" minTargetSdk="8.0">
+    </iosPod>
+  </iosPods>
+  <androidPackages>
+    <androidPackage spec="com.arthenica:mobile-ffmpeg-min-gpl:4.4">
+    </androidPackage>
+  </androidPackages>
+</dependencies>

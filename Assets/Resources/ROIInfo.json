@@ -1,0 +1,18 @@
+{
+	"pois": [
+		{
+			"name": "경기인력개발원",
+			"description": "경기인력개발원은 ...",
+			"latitude": 37.555555,
+			"longtitude": 127.555555,
+			"altitude": 53
+		},
+		{
+			"name": "식당",
+			"description": "경기인력개발원은 ...",
+			"latitude": 37.555555,
+			"longtitude": 127.555555,
+			"altitude": 53
+		}
+	]
+}
