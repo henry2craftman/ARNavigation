@@ -26,13 +26,18 @@ AR Foundation용 [ARCore Extension Package](https://developers.google.com/ar/dev
 
 ### 2. Google Cloud Platform API 사용 설정
 [Google Cloud Platform](https://cloud.google.com/, "Google Cloud Platform")는 구글 클라우드 플랫폼은 구글 검색과 유튜브와 같은 최종 사용자 제품을 위해 내부적으로 구글이 사용하는, 동일한 지원 인프라스트럭처 위에서 호스팅을 제공하는 구글의 클라우드 컴퓨팅 서비스 입니다.
-1. 프로젝트 등록
-이미지와 설명
-2. API 사용 설정
-이미지와 설명
-3. API Key 발급
-이미지와 설명
-
+<details>
+<summary>1. 프로젝트 등록</summary>
+이미지
+</details>
+<details>
+<summary>2. API 사용 설정</summary>
+이미지
+</details>
+<details>
+<summary>3. API Key 발급</summary>
+이미지
+</details>
 <br>
 
 ### 3. Geospatial API 사용설정
