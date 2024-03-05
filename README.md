@@ -127,4 +127,4 @@ ARCore 및 Google Maps Platform에서 제공하는 [Geospatial Creator](https://
 <br>
   
 ## License
-- License.md
+[License.md](/License.md, "License")
