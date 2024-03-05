@@ -2,7 +2,8 @@
 Station J는 제물포 스마트 Station-J 플랫폼 개발 및 콘텐츠 구축사업의 일환으로, 사용자가 제물포 지역을 걸어다니며 이용할 수 있는 ARNavigation, 특정 위치에서 활용할 수 있는 AR포토존 및 AR도슨트를 포함합니다.
 <br>
 <br>
-![ezgif-1-e192e23171](https://github.com/henry2craftman/ARNavigation/assets/141684228/fc5f43db-b5ab-41bc-b279-0a96f5d287d6)
+![ezgif-1-eb3981f90d](https://github.com/henry2craftman/ARNavigation/assets/141684228/27f395b6-70f9-41b1-ad73-484e9786abc7)
+
 
 ---
 <br>
