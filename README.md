@@ -55,7 +55,7 @@ ARCore 및 Google Maps Platform에서 제공하는 [Geospatial Creator](https://
 
 <br>
 
-### 3-4. Cesium Pacakge 설치
+#### 3-4. Cesium Pacakge 설치
 3D 지리공간 플랫폼 [Cesium](https://cesium.com/, "Cesium")은 강력한 3D 지리 공간 응용 프로그램을 만들기 위한 기본 개방형 플랫폼입니다.
 
 > Project Settings -> Package Manager -> Scoped Registries -> +버튼 클릭 후 내용 입력
