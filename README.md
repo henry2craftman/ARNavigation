@@ -1,130 +1,73 @@
-# Station-J : 제물포 스마트 Station-J 플랫폼 개발 및 콘텐츠 구축사업
-Station J는 제물포 스마트 Station-J 플랫폼 개발 및 콘텐츠 구축사업의 일환으로, 사용자가 제물포 지역을 걸어다니며 이용할 수 있는 ARNavigation, 특정 위치에서 활용할 수 있는 AR포토존 및 AR도슨트를 포함합니다.
-<br>
-<br>
-![ezgif-1-eb3981f90d](https://github.com/henry2craftman/ARNavigation/assets/141684228/27f395b6-70f9-41b1-ad73-484e9786abc7)
+# AR-Navigation
 
+## 1. 프로젝트 소개
 
----
-<br>
+**AR-Navigation**은 Unity 엔진과 Google의 ARCore Geospatial API를 기반으로 제작된 증강현실(AR) 내비게이션 애플리케이션입니다.
 
-## 상태 및 전제조건
-> Unity Version: 2022.3.2f1
+본 프로젝트는 사용자의 현재 GPS 위치를 파악하고, 지정된 목적지(POI)까지의 경로를 현실 세계 위에 증강현실로 시각화하여 보여줍니다. 이를 통해 사용자는 스마트폰 카메라를 통해 실제 길을 보면서 직관적으로 경로를 따라갈 수 있습니다.
 
-> Platform: Android
+복잡한 지도 앱을 계속 확인해야 하는 불편함 없이, 현실 공간에 직접 겹쳐진 AR 경로를 따라가기만 하면 되므로 특히 초행길이나 복잡한 장소에서 매우 유용합니다.
 
-> 지원기기: [ARCore 지원 기기](https://developers.google.com/ar/devices?hl=ko, "ARCore 지원 기기")
+## 2. 주요 기능
 
----
-<br>
+- **ARCore Geospatial API 활용**: GPS(위도, 경도) 및 고도 정보를 사용하여 현실 세계의 특정 지리적 위치에 AR 콘텐츠(앵커)를 정확하게 배치합니다.
+- **실시간 GPS 추적**: 사용자의 스마트폰에서 실시간으로 GPS 정보를 수신하여 현재 위치를 지속적으로 업데이트합니다.
+- **AR 경로 렌더링**: 출발지부터 목적지까지의 경로를 3D 메쉬(Mesh)로 생성하여 현실 공간 위에 렌더링합니다. 사용자는 이 AR 경로를 따라 걷기만 하면 됩니다.
+- **POI(관심 지점) 관리**: JSON 파일 또는 내부 데이터베이스를 통해 주요 관심 지점(POI)의 이름, 설명, 좌표 등의 데이터를 관리하고 불러옵니다.
+- **방향 안내**: 스마트폰의 나침반(Compass) 센서를 활용하여 사용자가 바라보는 방향을 감지하고, 올바른 경로 방향을 안내합니다.
+- **앵커(Anchor) 기반 상호작용**: 특정 위치에 가상 객체(앵커)를 고정시키고, 사용자와의 거리를 계산하여 상호작용을 제공합니다.
 
-## 시작하는 방법
-### 1. ARCore Extension Package 설치
-AR Foundation용 [ARCore Extension Package](https://developers.google.com/ar/develop/unity-arf/getting-started-extensions?hl=ko)는 Unity의 AR Foundation 패키지에 기능을 추가하여 앱에서 Cloud Anchors, 카메라 구성 필터, 녹화 및 재생과 같은 기능을 사용할 수 있습니다.
+## 3. 사용 기술
 
-<br>
+본 프로젝트는 다음과 같은 핵심 기술 및 라이브러리를 사용하여 개발되었습니다.
 
-### 2. Google Cloud Platform API 사용 설정
-[Google Cloud Platform](https://cloud.google.com/, "Google Cloud Platform")는 구글 클라우드 플랫폼은 구글 검색과 유튜브와 같은 최종 사용자 제품을 위해 내부적으로 구글이 사용하는, 동일한 지원 인프라스트럭처 위에서 호스팅을 제공하는 구글의 클라우드 컴퓨팅 서비스 입니다.
-<details>
-<summary>1. 프로젝트 등록</summary>
-이미지
-</details>
-<details>
-<summary>2. API 사용 설정</summary>
-이미지
-</details>
-<details>
-<summary>3. API Key 발급</summary>
-이미지
-</details>
-<br>
+- **엔진**:
+  - `Unity 2022.3 (LTS)`
 
-### 3. Geospatial API 사용설정
-Google의 [ARCore Geospatial API](https://developers.google.com/ar/develop/geospatial?hl=ko, "Google ARCore 
- Geospatial")는 Google 스트리트 뷰가 적용되는 지역의 VPS(Visual Positioning System) 기반의 현지화를 돕는 API입니다.
+- **핵심 AR/XR 기술**:
+  - `ARFoundation (5.0.7)`: Unity에서 AR 앱을 개발하기 위한 공식 프레임워크입니다.
+  - `ARCore XR Plugin (5.0.7)`: Android 기기에서 AR 기능을 사용하기 위한 Google의 ARCore SDK입니다.
+  - `ARCore Extensions (1.40.0)`: **Geospatial API**와 같은 ARCore의 고급 기능을 ARFoundation에서 사용할 수 있도록 확장합니다.
 
-#### 3-1. Geospatial API사용 설정
-> Project Settings -> XR Plug-in Management -> ARCore Extensions -> Enable Geospatial
+- **3D 지형 및 공간 데이터**:
+  - `Cesium for Unity (1.7.1)`: 3D 지형 및 공간 데이터를 Unity 환경으로 스트리밍하고 시각화하는 데 사용됩니다. Geospatial API와 결합하여 더욱 정밀한 위치 기반 AR 경험을 구현할 수 있습니다.
 
-#### 3-2. 사용 설정 및 API Key 사용 설명
-Geospatial API를 사용하기 위해선 Google Cloud Platform에 프로젝트를 등록하고 API 사용설정을 하고, API Key를 발급받아야 합니다.
+- **UI 및 렌더링**:
+  - `Universal Render Pipeline (URP)`: Unity의 최신 렌더링 파이프라인으로, 고품질 그래픽을 다양한 플랫폼에 최적화하여 제공합니다.
+  - `TextMeshPro`: 고품질 텍스트 렌더링을 위한 고급 텍스트 솔루션입니다.
+  - `Unity UI (UGUI)`: 애플리케이션의 UI를 제작하는 데 사용됩니다.
 
-> Android Authentication Stratage -> API Key로 설정, Android API Key 입력
+- **데이터 처리**:
+  - `JsonSerialize`: `ROIInfo.json`과 같은 JSON 형식의 데이터를 파싱하고 직렬화하는 데 사용됩니다.
 
-#### 3-3. Geospatial Creator API 사용 설정
-ARCore 및 Google Maps Platform에서 제공하는 [Geospatial Creator](https://developers.google.com/ar/geospatialcreator/intro?hl=ko, "Geospatial Creator")를 사용하면 개발자와 크리에이터 모두가 Photorealistic 3D 카드를 통해 실제 위치에서 강력하고 매력적인 3D 디지털 콘텐츠를 시각화, 빌드, 실행할 수 있습니다.
+- **기타**:
+  - `FFmpegForUnity`: (에셋으로 포함) 카메라 화면 녹화 등 동영상 처리가 필요할 경우를 대비해 포함된 라이브러리입니다.
 
->  Project Settings -> XR Plug-in Management -> ARCore Extensions -> Enable Geospatial Creator
+## 4. 프로젝트 구조
 
-#### 3-4. Cesium Pacakge 설치
-3D 지리공간 플랫폼 [Cesium](https://cesium.com/, "Cesium")은 강력한 3D 지리 공간 응용 프로그램을 만들기 위한 기본 개방형 플랫폼입니다.
+프로젝트의 주요 파일 및 폴더 구조는 다음과 같습니다.
 
-> Project Settings -> Package Manager -> Scoped Registries -> +버튼 클릭 후 내용 입력
+```
+ARNavigation/
+├── Assets/
+│   ├── 01. Scenes/         # ARNavigation, Geospatial 등 주요 씬(Scene) 파일
+│   ├── 02. Scripts/        # C# 스크립트 (핵심 로직)
+│   │   ├── GPSManager.cs           # GPS 데이터 수신 및 관리
+│   │   ├── GeospatialAnchorManager.cs # ARCore Geospatial API를 이용한 앵커 생성/관리
+│   │   ├── PathManager.cs          # AR 경로 메쉬 생성 및 렌더링
+│   │   ├── UIManager.cs            # UI 상호작용 및 상태 표시
+│   │   └── POIData.cs              # POI 데이터 구조 정의
+│   ├── 03. Prefabs/        # 재사용 가능한 게임 오브젝트 (AR 앵커, UI 등)
+│   ├── 04. Resources/      # 동적으로 로드할 리소스 (POI 아이콘, JSON 데이터 등)
+│   │   └── ROIInfo.json    # 관심 지역 정보가 담긴 JSON 파일
+│   └── ...
+├── Packages/
+│   └── manifest.json       # 프로젝트 패키지 의존성 관리
+└── ProjectSettings/        # Unity 프로젝트 설정 파일
+```
 
-<br>
+## 5. 기대 효과
 
-### 4. Naver Cloud Platform API 사용 설정
-[Naver Cloud Platform](https://www.ncloud.com/, "Never Cloud Platform")은 네이버, 라인, 밴드, 스노우, 웹툰 등 성공적인 네이버 글로벌 서비스를 위한 IT 서비스 플랫폼입니다.
-
-> Naver Cloud Platform 접속 -> 가입 -> API Key 발급
-
-#### 4-1. Directions5 API 사용 설정정
-[Direction 5 API](https://api.ncloud-docs.com/docs/ai-naver-mapsdirections, "Direction 5 API")는 사용자가 지정한 출발지/목적지 정보에 따라 경로 관련 정보를 제공합니다.
-
-> Naver Cloud Platform 접속 -> 가입 -> API Key 발급
-
-<details>
-<summary>내용</summary>
-이미지
-</details>
-
-#### 4-2. Static Map API 사용 설정
-[Static Map API](https://api.ncloud-docs.com/docs/ai-naver-mapsstaticmap, "Static Map API")는 요청된 URL 매개변수를 기반으로 웹 페이지에 표시할 수 있는 이미지로 지도를 반환
-
-<details>
-<summary>내용</summary>
-이미지
-</details>
-
-#### 4-3. API Key 사용 설정정
-<details>
-<summary>내용</summary>
-이미지
-</details>
-
-<br>
-
-### 5. Android Build Settings
-<details>
-<summary>내용</summary>
-이미지
-</details>
-
----
-<br>
-
-## 해당 프로젝트를 사용하여 개발
-### ROI 변경 방법
-<details>
-<summary>내용</summary>
-이미지
-</details>
-
-<br>
-
-### Directions5 Json 구조
-<details>
-<summary>내용</summary>
-이미지
-</details>
-
-<br>
-
-### Static map API 링크
-
----
-<br>
-  
-## License
-[License.md](/License.md)
+- **직관적인 길 찾기 경험 제공**: 사용자는 더 이상 2D 지도를 보고 방향을 가늠할 필요 없이, 눈앞의 실제 경로 위에 표시되는 AR 안내를 통해 쉽고 빠르게 길을 찾을 수 있습니다.
+- **새로운 위치 기반 서비스의 가능성**: AR 내비게이션을 기반으로 특정 장소에서만 나타나는 광고, 이벤트, 정보 안내 등 다양한 위치 기반 AR 서비스를 접목할 수 있습니다.
+- **안전성 향상**: 보행 중 스마트폰 화면의 지도에만 집중하여 발생할 수 있는 사고의 위험을 줄이고, 사용자가 전방을 주시하며 안전하게 이동할 수 있도록 돕습니다.
